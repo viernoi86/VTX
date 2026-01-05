@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+          <title>VTX</title>
+          <link rel="icon" type="image/png" href="https://cdn.discordapp.com/icons/1361556333710803208/b071383b68d8ca6d4c26a83b9d423d36.png?size=1024">
+          <style>
+            body {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              height: 100vh;
+              background: black;
+              margin: 0;
+              font-family: "gg sans", "Arial Rounded MT Bold", Helvetica, Arial, sans-serif;
+              gap: 20px;
+            }
+        
+            .button-container {
+              display: flex;
+              gap: 15px;
+              justify-content: center;
+            }
+        
+            .btn {
+              padding: 12px 24px;
+              background-color: #5865F2;
+              color: white;
+              text-decoration: none;
+              border-radius: 8px;
+              font-weight: 600;
+              cursor: pointer;
+              transition: background 0.3s, transform 0.1s;
+              display: inline-flex;
+              align-items: center;
+              justify-content: center;
+              min-width: 160px;
+              font-size: 14px;
+            }
+        
+            .btn:hover {
+              background-color: #4752c4;
+              transform: translateY(-1px);
+            }
+        
+            img {
+              max-width: 90%;
+              max-height: 70%;
+              border-radius: 10px;
+              box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+            }
+        
+            @media (max-width: 500px) {
+              .button-container {
+                flex-direction: column;
+              }
+            }
+          </style>
+        </head>
+        <body>
+          <div class="button-container">
+            <a class="btn" href="https://discord.gg/Q6rvX2s9" target="_blank">Join my Discord</a>
+            <a class="btn" href="#" onclick="copyScript()">Copy Script</a>
+          </div>
+        
+          <img src="https://i.postimg.cc/YSCP7Gqj/cat.png" alt="Unauthorized Cat">
+        
+          <script>
+            function copyScript() {
+              const script = `loadstring(game:HttpGet('https://raw.smokingscripts.org/vertex.lua'))()`
+        
+              navigator.clipboard.writeText(script).then(() => {
+                alert("Script copied to clipboard!")
+              })
+            }
+          </script>
+        </body>
+        </html>
